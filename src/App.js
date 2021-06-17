@@ -11,10 +11,37 @@ const unityContext = new UnityContext({
 });
 
 const App = () => {
+  const [isLoaded, setLoaded] = useState(false);
+  const [progression, setProgression] = useState(0);
+  const [message, setMessage] = useState("");
+  const [clickedPosition, setClickedPosition] = useState({ x: 0, y: 0 });
+
+  useEffect(function () {
+    unityContext.on("progress", setProgression);
+    unityContext.on("loaded", function () {
+      setLoaded(true);
+    });
+    unityContext.on("error", function (message) {
+      console.log("An error!", message);
+    });
+    unityContext.on("log", function (message) {
+      console.log("A message!", message);
+    });
+    unityContext.on("canvas", function (element) {
+      console.log("Canvas", element);
+    });
+    unityContext.on("Say", setMessage);
+    unityContext.on("ClickedPosition", function (x, y) {
+      setClickedPosition({ x, y });
+    });
+  }, []);
+
   return (
     <div>
       <div>
         {/* <Video /> */}
+        <p>Loading {progression * 100} percent...</p>
+        {isLoaded === true && <p>Loaded!</p>}
         <Unity
           unityContext={unityContext}
           style={{
