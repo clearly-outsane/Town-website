@@ -15,7 +15,8 @@ const config = {
 };
 
 const appId = "458915b8278f49fd84d5db3da66ca0a5"; //ENTER APP ID HERE
-const token = null;
+const token =
+  "006458915b8278f49fd84d5db3da66ca0a5IAC8hVmt1dvJ9JNOuFuHfpLlNjlZJZMPO0dXCQgTV3gX902x7RgAAAAAEABFAsi62b/MYAEAAQDYv8xg";
 
 const App = () => {
   const [inCall, setInCall] = useState(false);
