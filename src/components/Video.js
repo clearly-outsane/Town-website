@@ -23,7 +23,6 @@ const Video = () => {
   const [channelName, setChannelName] = useState("");
   return (
     <div>
-      <h1 className="heading">Meet scam artist Vinay</h1>
       {inCall ? (
         <VideoCall setInCall={setInCall} channelName={channelName} />
       ) : (

@@ -9,13 +9,18 @@ body {
   background-color: #f7f7f7;
 }
 
+.pancakeStack {
+  display: grid;
+  grid-template-rows: 0.5fr 1fr auto;
+}
+
 .App {
   position: relative;
   display: grid;
   grid-template-columns: 100%;
   justify-items: center;
   align-items: center;
-  height: 90vh;
+  height: 100%;
 }
 
 .heading {
@@ -31,7 +36,7 @@ body {
   margin: auto;
   align-self: flex-start;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   justify-items: center;
   align-items: center;
 }
@@ -82,12 +87,10 @@ body {
 .join {
   position: absolute;
   z-index: 1;
-  width: 30vw;
+
   height: fit-content;
   height: -moz-max-content;
-  top: 50vh;
-  left: 50vw;
-  transform: translate(-50%, -50%);
+
   width: 500px;
   max-width: 75vw;
 }

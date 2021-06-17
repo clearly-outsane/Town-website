@@ -38,10 +38,11 @@ const App = () => {
 
   return (
     <div>
-      <div>
-        {/* <Video /> */}
-        <p>Loading {progression * 100} percent...</p>
-        {isLoaded === true && <p>Loaded!</p>}
+      <div className="pancakeStack">
+        <div>
+          <Video />
+        </div>
+
         <Unity
           unityContext={unityContext}
           style={{
@@ -50,7 +51,12 @@ const App = () => {
             border: "2px solid black",
             background: "grey",
           }}
+          tabIndex={1}
         />
+        <div>
+          <p>Loading {progression * 100} percent...</p>
+          {isLoaded === true && <p>Loaded!</p>}
+        </div>
       </div>
     </div>
   );
