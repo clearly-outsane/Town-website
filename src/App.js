@@ -23,7 +23,7 @@ const App = () => {
   const [channelName, setChannelName] = useState("");
   return (
     <div>
-      <h1 className="heading">Agora RTC NG SDK React Wrapper</h1>
+      <h1 className="heading">Meet scam artist Vinay</h1>
       {inCall ? (
         <VideoCall setInCall={setInCall} channelName={channelName} />
       ) : (
