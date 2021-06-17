@@ -4,10 +4,10 @@ import { Video } from "./components";
 import Unity, { UnityContext } from "react-unity-webgl";
 
 const unityContext = new UnityContext({
-  loaderUrl: "unityBuild/myunityapp.loader.js",
-  dataUrl: "unityBuild/myunityapp.data",
-  frameworkUrl: "unityBuild/myunityapp.framework.js",
-  codeUrl: "unityBuild/myunityapp.wasm",
+  loaderUrl: "unityBuild/uncompressed_webgl.loader.js",
+  dataUrl: "unityBuild/uncompressed_webgl.data",
+  frameworkUrl: "unityBuild/uncompressed_webgl.framework.js",
+  codeUrl: "unityBuild/uncompressed_webgl.wasm",
 });
 
 const App = () => {
