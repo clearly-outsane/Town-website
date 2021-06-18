@@ -39,8 +39,10 @@ const App = () => {
       setClickedPosition({ x, y });
     });
 
-    setChannelName("lol");
-    setInCall(true);
+    unityContext.on("JoinChannel", function (channel) {
+      setChannelName(channel);
+      setInCall(true);
+    });
   }, []);
 
   return (
