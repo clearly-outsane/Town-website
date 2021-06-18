@@ -9,46 +9,29 @@ body {
   background-color: #f7f7f7;
 }
 
-.pancakeStack {
-  display: grid;
-  grid-template-rows: 0.5fr 1fr auto;
+#container {
+  position: relative;
+}
+#overlay {
+  position: absolute;
 }
 
 .App {
   position: relative;
-  display: grid;
-  grid-template-columns: 100%;
-  justify-items: center;
-  align-items: center;
-  height: 100%;
-}
-
-.heading {
-  text-align: center;
-  align-self: flex-start;
-  margin-bottom: 0;
+  height: 25vh;
+  width: 100vw;
 }
 
 #videos {
-  position: relative;
-  height: 85vh;
-  width: 100vw;
-  margin: auto;
-  align-self: flex-start;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  justify-items: center;
-  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 20vh;
 }
 
 .vid {
-  position: relative;
-  background-color: black;
-  height: 95%;
-  width: 95%;
-  border-width: 1px;
-  border-color: #38373a;
-  border-style: solid;
+  flex: 0 1 150px;
+  margin: 5px;
 }
 
 .controls {
@@ -87,9 +70,6 @@ body {
 .join {
   position: absolute;
   z-index: 1;
-
-  height: fit-content;
-  height: -moz-max-content;
 
   width: 500px;
   max-width: 75vw;

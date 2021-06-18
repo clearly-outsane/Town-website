@@ -18,15 +18,14 @@ const appId = "458915b8278f49fd84d5db3da66ca0a5"; //ENTER APP ID HERE
 const token =
   "006458915b8278f49fd84d5db3da66ca0a5IAC8hVmt1dvJ9JNOuFuHfpLlNjlZJZMPO0dXCQgTV3gX902x7RgAAAAAEABFAsi62b/MYAEAAQDYv8xg";
 
-const Video = () => {
-  const [inCall, setInCall] = useState(false);
-  const [channelName, setChannelName] = useState("");
+const Video = ({ inCall, setInCall, channelName }) => {
   return (
     <div>
       {inCall ? (
         <VideoCall setInCall={setInCall} channelName={channelName} />
       ) : (
-        <ChannelForm setInCall={setInCall} setChannelName={setChannelName} />
+        <div></div>
+        // <ChannelForm setInCall={setInCall} setChannelName={setChannelName} />
       )}
     </div>
   );
@@ -108,17 +107,12 @@ const Videos = ({ users, tracks }) => {
       <div id="videos">
         {/* AgoraVideoPlayer component takes in the video track to render the stream,
               you can pass in other props that get passed to the rendered div */}
-        <AgoraVideoPlayer
-          style={{ height: "95%", width: "95%" }}
-          className="vid"
-          videoTrack={tracks[1]}
-        />
+        <AgoraVideoPlayer className="vid" videoTrack={tracks[1]} />
         {users.length > 0 &&
           users.map((user) => {
             if (user.videoTrack) {
               return (
                 <AgoraVideoPlayer
-                  style={{ height: "95%", width: "95%" }}
                   className="vid"
                   videoTrack={user.videoTrack}
                   key={user.uid}
@@ -176,11 +170,6 @@ export const Controls = ({ tracks, setStart, setInCall }) => {
 const ChannelForm = ({ setInCall, setChannelName }) => {
   return (
     <form className="join">
-      {appId === "" && (
-        <p style={{ color: "red" }}>
-          Please enter your Agora App ID in App.tsx and refresh the page
-        </p>
-      )}
       <input
         type="text"
         placeholder="Enter Channel Name"

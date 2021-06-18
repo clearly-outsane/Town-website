@@ -11,6 +11,10 @@ const unityContext = new UnityContext({
 });
 
 const App = () => {
+  //for video
+  const [inCall, setInCall] = useState(false);
+  const [channelName, setChannelName] = useState("");
+
   const [isLoaded, setLoaded] = useState(false);
   const [progression, setProgression] = useState(0);
   const [message, setMessage] = useState("");
@@ -34,28 +38,39 @@ const App = () => {
     unityContext.on("ClickedPosition", function (x, y) {
       setClickedPosition({ x, y });
     });
+
+    setChannelName("lol");
+    setInCall(true);
   }, []);
 
   return (
     <div>
-      <div className="pancakeStack">
-        <div>
-          <Video />
-        </div>
-
+      <div id="container">
         <Unity
           unityContext={unityContext}
           style={{
-            width: "600px",
-            height: "600px",
-            border: "2px solid black",
             background: "grey",
+            position: "absolute",
+            height: "100vh",
+            width: "100vw",
           }}
           tabIndex={1}
         />
-        <div>
-          <p>Loading {progression * 100} percent...</p>
-          {isLoaded === true && <p>Loaded!</p>}
+
+        <div id="overlay">
+          <Video
+            inCall={inCall}
+            setInCall={setInCall}
+            channelName={channelName}
+          />
+          <div>
+            {progression * 100 < 100 && (
+              <p style={{ color: "white" }}>
+                Loading {progression * 100} percent...
+                {isLoaded === true && <p>Loaded!</p>}
+              </p>
+            )}
+          </div>
         </div>
       </div>
     </div>
