@@ -14,7 +14,7 @@ const config = {
     codec: "vp8",
 };
 
-const appId = "458915b8278f49fd84d5db3da66ca0a5"; //ENTER APP ID HERE
+const appId = "0ba24239f1d341798594240b204f8835"; //ENTER APP ID HERE
 const token =
     "006458915b8278f49fd84d5db3da66ca0a5IAB2zJBsPJSortIuL2MULk96Q9SW0y/s8KO7KFJW2XLuAU2x7RgAAAAAEABsKo0tyy7oYAEAAQDLLuhg";
 
