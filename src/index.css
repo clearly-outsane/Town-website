@@ -1,103 +1,104 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f7f7f7;
 }
 
 #container {
-  position: relative;
+    position: relative;
 }
 #overlay {
-  position: absolute;
+    position: absolute;
+    top: 0;
 }
 
 .App {
-  position: relative;
-  height: 25vh;
-  width: 100vw;
+    position: relative;
+    height: 25vh;
+    width: 100vw;
 }
 
 #videos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  height: 20vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 20vh;
 }
 
 .vid {
-  flex: 0 1 150px;
-  margin: 5px;
+    flex: 0 1 150px;
+    margin: 5px;
 }
 
 .controls {
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: -20px auto;
-  display: grid;
-  grid-template-columns: repeat(3, 33%);
-  align-items: center;
-  justify-items: center;
-  z-index: 1;
-  width: 500px;
-  max-width: 60vw;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: -20px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    align-items: center;
+    justify-items: center;
+    z-index: 1;
+    width: 500px;
+    max-width: 60vw;
 }
 
 .controls p {
-  padding: 10px;
-  cursor: pointer;
-  background: #38373a;
-  color: #f7f7f7;
-  border-width: 1px;
-  border-color: #f7f7f7;
-  border-style: solid;
+    padding: 10px;
+    cursor: pointer;
+    background: #38373a;
+    color: #f7f7f7;
+    border-width: 1px;
+    border-color: #f7f7f7;
+    border-style: solid;
 }
 
 .controls p.on {
-  background: #f7f7f7;
-  color: #38373a;
-  border-width: 1px;
-  border-color: #38373a;
-  border-style: solid;
+    background: #f7f7f7;
+    color: #38373a;
+    border-width: 1px;
+    border-color: #38373a;
+    border-style: solid;
 }
 
 .join {
-  position: absolute;
-  z-index: 1;
+    position: absolute;
+    z-index: 1;
 
-  width: 500px;
-  max-width: 75vw;
+    width: 500px;
+    max-width: 75vw;
 }
 
 .join input {
-  padding: 15px;
-  font-size: 1rem;
-  border-width: 1px;
-  border-color: #38373a;
-  border-style: solid;
-  width: 80%;
-  display: block;
-  margin: 50px auto;
+    padding: 15px;
+    font-size: 1rem;
+    border-width: 1px;
+    border-color: #38373a;
+    border-style: solid;
+    width: 80%;
+    display: block;
+    margin: 50px auto;
 }
 
 .join button {
-  min-width: 200px;
-  padding: 12px 0;
-  text-align: center;
-  background-color: #38373a;
-  color: #f7f7f7;
-  border-width: 1px;
-  border-color: #f7f7f7;
-  border-style: solid;
-  font-size: 1rem;
-  font-weight: 400;
-  cursor: pointer;
-  display: block;
-  margin: 0 auto;
+    min-width: 200px;
+    padding: 12px 0;
+    text-align: center;
+    background-color: #38373a;
+    color: #f7f7f7;
+    border-width: 1px;
+    border-color: #f7f7f7;
+    border-style: solid;
+    font-size: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
 }

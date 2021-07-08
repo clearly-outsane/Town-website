@@ -16,7 +16,7 @@ const config = {
 
 const appId = "458915b8278f49fd84d5db3da66ca0a5"; //ENTER APP ID HERE
 const token =
-    "006458915b8278f49fd84d5db3da66ca0a5IAAuFIpqXf5NizoAKZhAhO2c8ADIKcsjHnTjqWUCgzATwk2x7RgAAAAAEAAY899J1KDkYAEAAQDToORg";
+    "006458915b8278f49fd84d5db3da66ca0a5IAB2zJBsPJSortIuL2MULk96Q9SW0y/s8KO7KFJW2XLuAU2x7RgAAAAAEABsKo0tyy7oYAEAAQDLLuhg";
 
 const Video = ({ inCall, setInCall, channelName }) => {
     return (
