@@ -82,7 +82,7 @@ const VideoCall = ({ setInCall, channelName }) => {
                 });
             });
 
-            await client.join(appId, name, token, null);
+            await client.join(appId, name, null, null);
             if (tracks) await client.publish([tracks[0], tracks[1]]);
             setStart(true);
         };
