@@ -41,6 +41,8 @@ const App = () => {
             setChannelName(channel);
             setInCall(true);
         });
+        setChannelName("lol");
+        setInCall(true);
     }, []);
 
     return (
